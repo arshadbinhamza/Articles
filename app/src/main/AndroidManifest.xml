@@ -4,6 +4,7 @@
     package="com.abh.articles">
 
     <application
+        android:name=".ArticleApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,6 +16,7 @@
         tools:targetApi="31" >
 
         <activity android:name=".app.main.MainActivity"
+
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

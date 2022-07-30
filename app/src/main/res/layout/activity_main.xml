@@ -7,7 +7,7 @@
 
     <include
         layout="@layout/action_bar"
-        android:id="@+id/action_bar" />
+        android:id="@+id/action_bar_layout" />
 
 
 

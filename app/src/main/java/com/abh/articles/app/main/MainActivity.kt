@@ -15,6 +15,15 @@ class MainActivity  : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setSupportActionBar(binding.actionBarLayout.actionBarToolBar)
+        supportActionBar?.apply {
+
+            setHomeButtonEnabled(true)
+            setDisplayShowHomeEnabled(true)
+            setDisplayUseLogoEnabled(true)
+            setDisplayShowTitleEnabled(false)
+        }
     }
 
 }
