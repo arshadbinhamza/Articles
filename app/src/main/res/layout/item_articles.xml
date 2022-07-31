@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="articles"
+            type="com.abh.articles.domain.dto.model.Articles" />
+
+        <variable
+            name="listener"
+            type="com.abh.articles.presentation.main.ArticleListener" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/item_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingHorizontal="10dp"
+        android:onClick="@{() -> listener.onArticleClicked(articles)}">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/news_thumb_iv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:loadUrl="@{articles.thumb != null ? articles.thumb : articles.banner}"
+            app:shapeAppearanceOverlay="@style/circleImageView"
+            tools:src="@tools:sample/avatars" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="-5dp"
+            android:layout_toStartOf="@+id/detail_arrow_iv"
+            android:layout_toEndOf="@+id/news_thumb_iv"
+            android:orientation="vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp">
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@{articles.title}"
+                android:maxLines="3" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/by_line_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{articles.byline}"
+                    android:maxLines="2" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginTop="17dp"
+                    android:gravity="end|bottom"
+                    android:orientation="horizontal"
+                    android:paddingStart="3dp"
+                    android:paddingEnd="5dp">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="3dp"
+                        android:gravity="end|bottom"
+                        android:src="@drawable/ic_events"
+                        app:tint="@color/dark_gray"></ImageView>
+
+                    <TextView
+                        android:id="@+id/date_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:lines="1"
+                        android:text="@{com.abh.articles.commons.Utils.getDateFormatted(articles.updated)}" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/detail_arrow_iv"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="-5dp"
+            android:padding="3dp"
+            android:src="@drawable/ic_arrow_next"
+            app:tint="@color/dark_gray" />
+
+    </RelativeLayout>
+
+</layout>

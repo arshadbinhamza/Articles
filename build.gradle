@@ -2,6 +2,12 @@
 
 buildscript {
 
+    ext {
+        kotlin_version = "1.7.0"
+        kotlin_coroutines_version = "1.6.4"
+        hilt_version = '2.42'
+        lifecycle_version = "2.5.0"
+    }
     dependencies {
 
         classpath "com.google.dagger:hilt-android-gradle-plugin:2.42"

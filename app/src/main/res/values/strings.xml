@@ -2,4 +2,11 @@
     <string name="app_name">Articles</string>
     <string name="articles">Articles</string>
     <string name="no_actions_added">No actions added</string>
+    <string name="_1_day">1 day</string>
+    <string name="_7_days">7 days</string>
+    <string name="_30_days">30 days</string>
+    <string name="network_error_not_founrd">Network Error-Not found</string>
+    <string name="network_error_unauthorized">Network Error-Un Authorized</string>
+    <string name="network_error_internal_server_error">Network Error-Internal server error </string>
+    <string name="request_cannot_be_processed">Request cannot be processed </string>
 </resources>
