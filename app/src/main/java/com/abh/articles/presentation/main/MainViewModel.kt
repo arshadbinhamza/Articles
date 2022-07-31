@@ -20,7 +20,7 @@ class MainViewModel @Inject constructor( private val getArticles :GetArticles) :
 
 
 
-    var period: Int=7
+    var period: Int=1
     var section: String = "all-sections"
     private val _articleList = MutableLiveData<List<Articles>>()
     val articleList: LiveData<List<Articles>> = _articleList
@@ -72,6 +72,7 @@ class MainViewModel @Inject constructor( private val getArticles :GetArticles) :
 
     fun updateOptionSeleted(days: Int) {
         period = days;
+        getArticles()
 
     }
 

@@ -30,6 +30,7 @@ fun ImageView.loadUrl(url: String?) {
         .load(R.mipmap.ic_launcher).into(this)
 }
 
+
 @Suppress("UNCHECKED_CAST")
 @BindingAdapter("submitList")
 fun submitList(recyclerView: RecyclerView, list: List<BaseListItem>?) {

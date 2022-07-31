@@ -9,6 +9,12 @@ object Utils {
     @JvmStatic
     fun getDateFormatted(date: Long): String =
         SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Date(date))
+
+    @JvmStatic
+    fun getDatePrettied(date: Long): String =
+        SimpleDateFormat("dd MMM, yyyy", Locale.getDefault()).format(Date(date))
+
+
     fun getTimestamp(
         format1: String,
         dateString1: String?,

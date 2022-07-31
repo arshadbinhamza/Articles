@@ -1,6 +1,8 @@
 package com.abh.articles.presentation.main
 
+import android.content.Intent
 import android.os.Bundle
+import android.provider.AlarmClock.EXTRA_MESSAGE
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
@@ -9,6 +11,7 @@ import com.abh.articles.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 import androidx.activity.viewModels
 import com.abh.articles.R
+import com.abh.articles.presentation.detail.DetailActivity
 
 @AndroidEntryPoint
 class MainActivity  : AppCompatActivity() {
@@ -48,6 +51,10 @@ class MainActivity  : AppCompatActivity() {
                     is MainViewModel.Interactor.UserClick -> {
 
 //                        openNewsDetail(transportData.news)
+                        val intent = Intent(this, DetailActivity::class.java).apply {
+                            putExtra("articles", transportData.article)
+                        }
+                        startActivity(intent)
                     }
                     is MainViewModel.Interactor.Message -> {
 
@@ -99,6 +106,7 @@ class MainActivity  : AppCompatActivity() {
                 viewModel.updateOptionSeleted(30)
             }
         }
+        item.isChecked=true
 
         return super.onOptionsItemSelected(item)
     }

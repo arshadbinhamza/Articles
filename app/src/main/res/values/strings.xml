@@ -9,4 +9,8 @@
     <string name="network_error_unauthorized">Network Error-Un Authorized</string>
     <string name="network_error_internal_server_error">Network Error-Internal server error </string>
     <string name="request_cannot_be_processed">Request cannot be processed </string>
+    <string name="section">Section:</string>
+    <string name="summary">Summary:</string>
+    <string name="article_details">Article Details</string>
+    <string name="title">Title:</string>
 </resources>
