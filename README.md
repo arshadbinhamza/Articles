@@ -12,7 +12,7 @@ Generated reports will be seen in the build folder with path:
 AppModule > build > reports >
 
 **Architecture:**
-Try to meet Clean architecture with presentation layer MVVM
+Clean architecture with presentation layer MVVM
 
 **Project Architecture:**  
 Clean - MVVM
