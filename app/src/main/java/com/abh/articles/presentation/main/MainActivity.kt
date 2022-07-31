@@ -60,6 +60,10 @@ class MainActivity  : AppCompatActivity() {
 
                         Toast.makeText(this, transportData.message, Toast.LENGTH_SHORT).show()
                     }
+                    is MainViewModel.Interactor.DataRefreshed -> {
+
+                       binding.recyclerViewArticles.scrollToPosition(0)
+                    }
                 }
             }
         }

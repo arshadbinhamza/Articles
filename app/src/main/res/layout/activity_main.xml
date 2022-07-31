@@ -23,7 +23,7 @@
         layout="@layout/action_bar"
         android:id="@+id/action_bar_layout" />
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_movie"
+        android:id="@+id/recycler_view_articles"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
@@ -38,7 +38,7 @@
         tools:listitem="@layout/item_articles" />
 
     <ProgressBar
-        android:id="@+id/progress_bar_movies"
+        android:id="@+id/progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"

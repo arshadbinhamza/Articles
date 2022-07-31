@@ -31,7 +31,6 @@ class MainViewModel @Inject constructor( private val getArticles :GetArticles) :
     private val _interactorBridge = MutableLiveData<Event<Interactor>>()
     private val interactorBridge: LiveData<Event<Interactor>> = _interactorBridge
 
-    val showToast = MutableLiveData<Event<Articles>>()
 
     init {
         getArticles()
@@ -61,6 +60,7 @@ class MainViewModel @Inject constructor( private val getArticles :GetArticles) :
 
                             _showProgressBar.postValue(false)
                             _articleList.value = it as List<Articles>
+                            _interactorBridge.value = Event(Interactor.DataRefreshed())
                         }
                     }
             } catch (error: Exception) {
@@ -97,5 +97,6 @@ class MainViewModel @Inject constructor( private val getArticles :GetArticles) :
 
         class Message(val message: Int) : Interactor()
         class UserClick(val article: Articles) : Interactor()
+        class DataRefreshed() : Interactor()
     }
 }
