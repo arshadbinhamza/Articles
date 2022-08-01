@@ -101,7 +101,7 @@ public class MainActivityTest {
         // Added a sleep statement to match the app's execution delay.
         // The recommended way to handle such scenarios is to use Espresso idling resources:
         // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
-        try {
+       /* try {
             Thread.sleep(2300);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -173,13 +173,13 @@ public class MainActivityTest {
                                 0),
                         isDisplayed()));
         materialTextView3.perform(click());
-/*
+*//*
         ViewInteraction recyclerView = onView(
                 allOf(withId(androidx.appcompat.R.id.recycler_view_articles),
                         childAtPosition(
                                 withId(R.id.container),
                                 1)));
-        recyclerView.perform(actionOnItemAtPosition(0, click()));*/
+        recyclerView.perform(actionOnItemAtPosition(0, click()));*//*
 
         // Added a sleep statement to match the app's execution delay.
         // The recommended way to handle such scenarios is to use Espresso idling resources:
@@ -189,7 +189,7 @@ public class MainActivityTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
+*/
        /* ViewInteraction appCompatImageView = onView(
                 allOf(withId(R.id.img_back),
                         childAtPosition(
