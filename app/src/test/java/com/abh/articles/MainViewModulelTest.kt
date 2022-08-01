@@ -11,7 +11,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.mockito.kotlin.mock
-import org.mockito.kotlin.whenever
+
 import java.util.concurrent.TimeUnit
 
 class MainViewModulelTest {
@@ -40,7 +40,10 @@ class MainViewModulelTest {
 
         viewModel = MainViewModel(getArticles)
 
-        TimeUnit.MINUTES.sleep(1);
+        TimeUnit.MINUTES.sleep(1)
+
+//        Assert.assertEquals(false, viewModel.articleList.value.isNullOrEmpty())
+
 
         Assert.assertEquals(false, viewModel.showProgressBar.value)
     }
