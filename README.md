@@ -20,3 +20,6 @@ Clean - MVVM
 **Project Language:**  
 Kotlin  
 Java - instrumental test(espresso)
+
+
+[![codecov](https://codecov.io/gh/arshadbinhamza/Articles/branch/main/graph/badge.svg?token=3KIQIX1U3B)](https://codecov.io/gh/arshadbinhamza/Articles)
